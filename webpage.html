@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Playlist Game</title>
+	<title>Music Madness</title>
 </head>
 <body>
-	<h1>Welcome to the Playlist Game!</h1>
+	<h1>Welcome to Music Madness!</h1>
 
-	<!-- Login form -->
+	<!-- Login Form -->
 	<form>
 		<label for="email">Email:</label>
-		<input type="email" id="email" name="email">
-		<input type="submit" value="Login">
+		<input type="email" id="email" name="email" required>
+		<br>
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password" required>
+		<br>
+		<button type="submit">Log In</button>
 	</form>
 
 	<!-- Game lobby -->
@@ -21,8 +25,7 @@
 		<ul id="player-list">
 			<!-- Players will be added dynamically via JavaScript -->
 		</ul>
-		<p>Elimination deadline: <span id="elimination-deadline"></span></p>
-		<p>Commentary deadline: <span id="commentary-deadline"></span></p>
+		<p>Elimination and Snark deadline: <span id="elim-snark-deadline"></span></p>
 		<button id="start-game" disabled>Start game</button>
 	</div>
 
@@ -33,8 +36,7 @@
 		<ul id="playlist">
 			<!-- Songs will be added dynamically via JavaScript -->
 		</ul>
-		<p>Elimination deadline: <span id="elimination-deadline"></span></p>
-		<p>Commentary deadline: <span id="commentary-deadline"></span></p>
+		<p>Elimination and Snark deadline: <span id="elim-snark-deadline"></span></p>
 		<button id="eliminate-song" disabled>Eliminate a song</button>
 	</div>
 
