@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Playlist Game</title>
+</head>
+<body>
+	<h1>Welcome to the Playlist Game!</h1>
+
+	<!-- Login form -->
+	<form>
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email">
+		<input type="submit" value="Login">
+	</form>
+
+	<!-- Game lobby -->
+	<div id="game-lobby">
+		<h2>Current game:</h2>
+		<p>Theme: <span id="game-theme"></span></p>
+		<p>Players:</p>
+		<ul id="player-list">
+			<!-- Players will be added dynamically via JavaScript -->
+		</ul>
+		<p>Elimination deadline: <span id="elimination-deadline"></span></p>
+		<p>Commentary deadline: <span id="commentary-deadline"></span></p>
+		<button id="start-game" disabled>Start game</button>
+	</div>
+
+	<!-- Game screen -->
+	<div id="game-screen" hidden>
+		<h2>Round <span id="round-number"></span></h2>
+		<h3>Current playlist:</h3>
+		<ul id="playlist">
+			<!-- Songs will be added dynamically via JavaScript -->
+		</ul>
+		<p>Elimination deadline: <span id="elimination-deadline"></span></p>
+		<p>Commentary deadline: <span id="commentary-deadline"></span></p>
+		<button id="eliminate-song" disabled>Eliminate a song</button>
+	</div>
+
+	<!-- Semi-finals screen -->
+	<div id="semifinals-screen" hidden>
+		<h2>Semi-finals</h2>
+		<h3>Choose your favourite and second favourite songs:</h3>
+		<ul id="semifinals-playlist">
+			<!-- Semi-finalist songs will be added dynamically via JavaScript -->
+		</ul>
+		<button id="vote-semifinals" disabled>Vote</button>
+	</div>
+
+	<!-- Finals screen -->
+	<div id="finals-screen" hidden>
+		<h2>Finals</h2>
+		<h3>Choose your favourite and second favourite songs:</h3>
+		<ul id="finals-playlist">
+			<!-- Finalist songs will be added dynamically via JavaScript -->
+		</ul>
+		<button id="vote-finals" disabled>Vote</button>
+	</div>
+
+	<script src="game.js"></script>
+</body>
+</html>
